@@ -1,9 +1,9 @@
 #!/bin/bash
 
-PERSON1=
-PERSON2=
+PERSON1=$1
+PERSON2=$2
 
-echo "Trump::Welcome to Alaska Putin"
-echo "Putin::Thank you Trump, Finally not on zoom webiner"
-echo "Trump::so, do we have a deal"
-echo "Putin::yes, if you make Ukraine joins Russia"
+echo "$PERSON1::Welcome to Alaska $PERSON2"
+echo "$PERSON2::Thank you $PERSON1, Finally not on zoom webiner"
+echo "$PERSON1::so, do we have a deal"
+echo "$PERSON2::yes, if you make Ukraine joins Russia"

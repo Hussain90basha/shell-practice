@@ -3,7 +3,7 @@
 echo "Enter the number:"
 read number
 
-if [ $(($NUMBER)) -lt 0 ]; then
+if [ $(($NUMBER)) is a "+" "-"]; then
     echo "positive number"
 else
     echo "negative number"

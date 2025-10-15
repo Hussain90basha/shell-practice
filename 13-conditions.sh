@@ -3,8 +3,8 @@
 echo "Enter the year:"
 read YEAR
 
-if [ $(($YEAR % 4)) -eq o ]; then
-    echo "LEAP YEAR"
+if [ $(($YEAR % 4)) -eq 0 ]; then
+    echo "year is a LEAP YEAR"
  else
-    echo "Is not a LEAP YEAR"
+    echo "year is not a LEAP YEAR"
 fi       

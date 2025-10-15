@@ -10,7 +10,10 @@ SUM=$(($NUMBER1+$NUMBER2+$NAME))
 
 echo "SUM is: ${SUM}" 
 
+# size = 4; max index = 3 
+
 LEADERS=("Husssain" "Eliyas" "Ismail")
 
 echo "ALL leaders: ${LEADERS[@]}"
 echo "First leaders: ${LEADERS[0]}"
+#echo "First leaders: ${LEADERS[10]}"

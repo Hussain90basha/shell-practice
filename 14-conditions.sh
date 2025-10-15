@@ -4,6 +4,7 @@ echo "Enter the number:"
 read number
 
 if [ $(($NUMBER)) -lt 0 ]; then
-    echo "even number"
+    echo "positive number"
 else
-    echo "odd umber"    
+    echo "negative number"
+ fi       

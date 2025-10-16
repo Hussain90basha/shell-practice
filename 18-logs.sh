@@ -8,14 +8,16 @@ N="\e[0m"
 
 LOGS_FOLDER= "/var/log/shell-script"
 SCRIPT_NAME=$ (echo $0 | cut -d "." -f1)
-LOG_FILE="$LOGS_FOLDER/$SCRIPT_NAME.LOG"
+LOG_FILE="$LOGS_FOLDER/$SCRIPT_NAME.log"
 
 mkdir -p $LOGS_FOLDER
 echo "script started executed at: $(date)"
+
 if [ $USERID -ne 0 ]; then
     echo "ERROR:: Please run this script with root privelege"
     exit 1 # Failure is another than 0
 fi
+
 VALIDATE(){ # functions receive inputs through args just like shell script args
     if [ $1 -ne 0 ]; then
        echo -e "ERROR:: Installing $2 ... $R failure $N"

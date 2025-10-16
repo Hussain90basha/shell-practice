@@ -16,6 +16,14 @@ if [ $USERID -ne 0 ]; then
     echo "ERROR:: Please run this script with root privelege"
     exit 1 # Failure is another than 0
 fi
+VALIDATE(){ # functions receive inputs through args just like shell script args
+    if [ $1 -ne 0 ]; then
+       echo -e "ERROR:: Installing $2 ... $R failure $N"
+       exit 1
+    else
+       echo -e "Installing $2 ... $G success $N"
+ fi
+}
 
 dnf list installed mysql &>>$LOG_FILE
 # install if it is not found

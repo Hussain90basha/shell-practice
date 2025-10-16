@@ -10,8 +10,8 @@ LOGS_FOLDER= "/var/log/shell-script"
 SCRIPT_NAME=$ (echo $0 | cut -d "." -f1)
 LOG_FILE="$LOGS_FOLDER/$SCRIPT_NAME.log"
 
-    mkdir -p $LOGS_FOLDER
-    echo "script started executed at: $(date)"
+mkdir -p $LOGS_FOLDER
+echo "script started executed at: $(date)"
 
 if [ $USERID -ne 0 ]; then
     echo "ERROR:: Please run this script with root privelege"
@@ -26,7 +26,6 @@ VALIDATE(){ # functions receive inputs through args just like shell script args
        echo -e "Installing $2 ... $G success $N"
  fi
 }
-
 dnf list installed mysql &>>$LOG_FILE
 # install if it is not found
 if [ $? -ne 0 ]; then
@@ -46,7 +45,7 @@ fi
 dnf list installed python3 &>>$LOG_FILE
 if [ $? -ne 0 ]; then
     dnf install python3 -y &>>$LOG_FILE
-    VALIDATE $? "python3" 
+    VALIDATE $? "python3"
 else
     echo -e "PYTHON3 already exist ... $Y SKIPPING $N"
 fi    

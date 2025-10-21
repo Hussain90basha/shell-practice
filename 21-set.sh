@@ -2,7 +2,13 @@
 
 set -e 
 
+error(){
+    echo "There is an error $LINENO, command is: $BASH_COMMAND"
+
+}
+trap error ERR
+
 echo "Hello.."
 echo "Before error.."
-ccibjchlikjnjk;dnf
+ccibjchlikjnjk;dnf # here shell understands there is an error and signal is ERR
 echo "After error"

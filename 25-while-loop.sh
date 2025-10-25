@@ -6,7 +6,7 @@ count=5
 while [ $count -gt 0 ]
 do
     echo "Time left: $count"
-    Sleep 1 #pause for 1 sec
+    sleep 1 #pause for 1 sec
     count=$((count -1)) #Decrement the count
 done
 

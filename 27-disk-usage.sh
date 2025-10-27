@@ -13,3 +13,4 @@ do
         MESSAGE+="High Disk usage on $PARTITION: $USAGE % <br>" # escaping
     fi
 done <<< $DISK_USAGE
+    echo "Message Body: $MESSAGE"

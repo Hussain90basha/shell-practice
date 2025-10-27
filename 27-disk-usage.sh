@@ -1,5 +1,4 @@
 #!/bin/bash
-#!/bin/bash
 
 DISK_USAGE=$(df -hT | grep -v Filesystem)
 DISK_THRESHOLD=2 # in project we keep it as 75
